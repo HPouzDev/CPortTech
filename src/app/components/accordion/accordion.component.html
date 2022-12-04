@@ -1,0 +1,91 @@
+<ngb-accordion #a="ngbAccordion" activeIds="custom-panel-1">
+  <ngb-panel>
+    <ng-template ngbPanelHeader let-opened="opened">
+      <div
+        class="accordion-button custom-header justify-content-between"
+        [class.collapsed]="!opened"
+      >
+        <p class="m-0">Panel de control</p>
+        <div>
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-danger ms-2"
+            (click)="a.collapseAll()"
+          >
+            Cerrar todo
+          </button>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel>
+    <ng-template ngbPanelHeader>
+      <button ngbPanelToggle class="accordion-button">
+        QC-1 / SKR-7
+      </button>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      Ruedas
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel>
+  <ng-template ngbPanelHeader>
+    <button ngbPanelToggle class="accordion-button">
+      QC-1 / SKR-7
+    </button>
+  </ng-template>
+  <ng-template ngbPanelContent>
+    Ruedas
+  </ng-template>
+</ngb-panel>
+<ngb-panel>
+<ng-template ngbPanelHeader>
+  <button ngbPanelToggle class="accordion-button">
+    QC-1 / SKR-7
+  </button>
+</ng-template>
+<ng-template ngbPanelContent>
+  Ruedas
+</ng-template>
+</ngb-panel>
+<ngb-panel>
+<ng-template ngbPanelHeader>
+  <button ngbPanelToggle class="accordion-button">
+    QC-1 / SKR-7
+  </button>
+</ng-template>
+<ng-template ngbPanelContent>
+  Ruedas
+</ng-template>
+</ngb-panel>
+<ngb-panel>
+<ng-template ngbPanelHeader>
+  <button ngbPanelToggle class="accordion-button">
+    QC-1 / SKR-7
+  </button>
+</ng-template>
+<ng-template ngbPanelContent>
+  Ruedas
+</ng-template>
+</ngb-panel>
+<ngb-panel>
+<ng-template ngbPanelHeader>
+  <button ngbPanelToggle class="accordion-button">
+    QC-1 / SKR-7
+  </button>
+</ng-template>
+<ng-template ngbPanelContent>
+  Ruedas
+</ng-template>
+</ngb-panel>
+<ngb-panel>
+<ng-template ngbPanelHeader>
+  <button ngbPanelToggle class="accordion-button">
+    QC-1 / SKR-7
+  </button>
+</ng-template>
+<ng-template ngbPanelContent>
+  Ruedas
+</ng-template>
+</ngb-panel>
+</ngb-accordion>
