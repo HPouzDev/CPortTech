@@ -1,11 +1,5 @@
 import { Injectable } from '@angular/core';
-
-import {
-  Auth,
-  signInWithEmailAndPassword,
-  signOut,
-  signInWithPopup,
-} from '@angular/fire/auth';
+import { Auth, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root',

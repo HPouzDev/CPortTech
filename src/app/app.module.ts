@@ -28,7 +28,10 @@ const config = {
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(config),
+    AngularFireAuthModule,
     AngularFireDatabaseModule,
+    AngularFireStorageModule,
+    AngularFirestoreModule,
     RouterModule,
   ],
   declarations: [
