@@ -1,44 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { Routes, Router, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+
 import { AppComponent } from './app.component';
+import { AuthService } from './auth.service';
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthGuard } from './auth.guard';
 
-//COMPONENTS
-import { DashboardComponent } from './/components/dashboard/dashboard.component';
-import { LoginComponent } from './/components/login/login.component';
-import { RecoverpassComponent } from './/components/recoverpass/recoverpass.component';
-
-const config = {
-  apiKey: 'AIzaSyBsYE6BOjGkLsUNaRwzOcgQDXA6q7rOl6I',
-  authDomain: 'oficinatallerbest.firebaseapp.com',
-  databaseURL:
-    'https://oficinatallerbest-default-rtdb.europe-west1.firebasedatabase.app',
-  projectId: 'oficinatallerbest',
-  storageBucket: 'oficinatallerbest.appspot.com',
-  messagingSenderId: '230783679721',
-  appId: '1:230783679721:web:5f9cd5a4468983c9658478',
-};
+const appRoutes: Routes = [
+  { path: 'signin', component: LoginComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuard],
+  },
+];
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    AngularFireModule.initializeApp(config),
-    AngularFireAuthModule,
-    AngularFireDatabaseModule,
-    AngularFireStorageModule,
-    RouterModule,
-  ],
-  declarations: [
-    AppComponent,
-    DashboardComponent,
-    LoginComponent,
-    RecoverpassComponent,
-  ],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+  declarations: [AppComponent, LoginComponent, DashboardComponent],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
