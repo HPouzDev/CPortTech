@@ -5,6 +5,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { Routes, Router, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 //COMPONENTS
@@ -28,6 +29,7 @@ const config = {
     BrowserModule,
     AngularFireModule.initializeApp(config),
     AngularFireDatabaseModule,
+    RouterModule,
   ],
   declarations: [
     AppComponent,
