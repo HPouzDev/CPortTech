@@ -7,7 +7,6 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const config = {
   apiKey: 'AIzaSyBsYE6BOjGkLsUNaRwzOcgQDXA6q7rOl6I',
@@ -25,7 +24,6 @@ const config = {
     BrowserModule,
     AngularFireModule.initializeApp(config),
     AngularFireDatabaseModule,
-    NgbModule,
   ],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],
