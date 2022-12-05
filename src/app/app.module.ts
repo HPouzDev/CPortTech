@@ -31,7 +31,6 @@ const config = {
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
-    AngularFirestoreModule,
     RouterModule,
   ],
   declarations: [
