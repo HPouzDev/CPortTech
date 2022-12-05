@@ -6,7 +6,11 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+
+//COMPONENTS
+import { DashboardComponent } from './/components/dashboard/dashboard.component';
+import { LoginComponent } from './/components/login/login.component';
+import { RecoverpassComponent } from './/components/recoverpass/recoverpass.component';
 
 const config = {
   apiKey: 'AIzaSyBsYE6BOjGkLsUNaRwzOcgQDXA6q7rOl6I',
@@ -25,7 +29,12 @@ const config = {
     AngularFireModule.initializeApp(config),
     AngularFireDatabaseModule,
   ],
-  declarations: [AppComponent, HelloComponent],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    LoginComponent,
+    RecoverpassComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
